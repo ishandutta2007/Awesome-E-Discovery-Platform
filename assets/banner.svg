@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Dynamic Flow Line Gradient -->
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .title {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 52px;
+      fill: #ffffff;
+    }
+    .subtitle {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 22px;
+      fill: #cbd5e1;
+    }
+    .badge-text {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      fill: #e0e7ff;
+    }
+    
+    /* Dynamic Background Elements Animation */
+    @keyframes wavePass {
+      0% { transform: translateX(-100px); }
+      50% { transform: translateX(100px); }
+      100% { transform: translateX(-100px); }
+    }
+
+    @keyframes pulseNode {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.1); }
+    }
+
+    .wave {
+      animation: wavePass 12s ease-in-out infinite;
+    }
+    .node {
+      animation: pulseNode 4s ease-in-out infinite;
+      transform-origin: center;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="350" rx="16" fill="url(#bgGrad)"/>
+  <rect width="1200" height="350" rx="16" fill="none" stroke="#334155" stroke-width="2"/>
+
+  <!-- Dynamic / Animated Background Wave Elements (Background Layer) -->
+  <g class="wave" opacity="0.4">
+    <path d="M-100 120 Q 200 40 500 180 T 1100 100 T 1400 220" fill="none" stroke="url(#flowGrad)" stroke-width="3"/>
+    <path d="M-100 220 Q 300 300 700 120 T 1300 250" fill="none" stroke="url(#flowGrad)" stroke-width="2" stroke-dasharray="8 6"/>
+  </g>
+
+  <!-- Subtle grid pattern overlay -->
+  <g opacity="0.1" stroke="#94a3b8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="350"/>
+    <line x1="300" y1="0" x2="300" y2="350"/>
+    <line x1="500" y1="0" x2="500" y2="350"/>
+    <line x1="700" y1="0" x2="700" y2="350"/>
+    <line x1="900" y1="0" x2="900" y2="350"/>
+    <line x1="1100" y1="0" x2="1100" y2="350"/>
+  </g>
+
+  <!-- Glowing background nodes -->
+  <circle cx="150" cy="80" r="4" fill="#818cf8" class="node"/>
+  <circle cx="1050" cy="280" r="6" fill="#c084fc" class="node" style="animation-delay: 1s;"/>
+  <circle cx="950" cy="70" r="5" fill="#38bdf8" class="node" style="animation-delay: 2s;"/>
+  <circle cx="200" cy="270" r="5" fill="#a855f7" class="node" style="animation-delay: 1.5s;"/>
+
+  <!-- Foreground Content Container -->
+  <g transform="translate(80, 80)">
+    
+    <!-- Top Category Pill / Badge -->
+    <g transform="translate(0, 0)">
+      <rect width="210" height="32" rx="16" fill="#312e81" stroke="#4f46e5" stroke-width="1"/>
+      <text x="105" y="21" text-anchor="middle" class="badge-text">⚖️ LEGAL TECH &amp; FORENSICS</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="90" class="title">Awesome E-Discovery Platform</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="135" class="subtitle">A Curated Ecosystem of SaaS Platforms &amp; Open-Source Legal Tech Tools</text>
+
+    <!-- Highlight Pills -->
+    <g transform="translate(0, 165)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="170" height="30" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+        <text x="85" y="19" text-anchor="middle" class="badge-text">🔍 Document Review</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(182, 0)">
+        <rect width="190" height="30" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+        <text x="95" y="19" text-anchor="middle" class="badge-text">📊 Forensic Processing</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(384, 0)">
+        <rect width="170" height="30" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+        <text x="85" y="19" text-anchor="middle" class="badge-text">⚡ Early Case Assessment</text>
+      </g>
+    </g>
+
+  </g>
+</svg>
