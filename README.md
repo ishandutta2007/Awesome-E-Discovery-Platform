@@ -67,7 +67,7 @@ Commercial e-discovery platforms provide fully hosted cloud infrastructure, scal
 
 Open-source e-discovery solutions empower legal teams, forensic examiners, and academic researchers to build custom processing pipelines, preserve sensitive case data locally, and avoid vendor lock-in or per-gigabyte cloud costs.
 
-| Repository 📦 | GitHub Stars ⭐ | Primary License 📜 | Description & Capabilities 💡 |
+| Repository 📦 | GitHub_Stars ⭐ | Primary License 📜 | Description & Capabilities 💡 |
 | :--- | :--- | :--- | :--- |
 | **[paperless-ngx/paperless-ngx](https://github.com/paperless-ngx/paperless-ngx)** | [![Stars](https://img.shields.io/github/stars/paperless-ngx/paperless-ngx?style=social&color=white)](https://github.com/paperless-ngx/paperless-ngx/stargazers) | GPL-3.0 | Self-hosted document management system with full-text search, OCR (Tesseract), automatic tagging, and email ingestion. |
 | **[volatilityfoundation/volatility3](https://github.com/volatilityfoundation/volatility3)** | [![Stars](https://img.shields.io/github/stars/volatilityfoundation/volatility3?style=social&color=white)](https://github.com/volatilityfoundation/volatility3/stargazers) | VSL-1.0 | Advanced memory forensics framework for extraction of digital evidence from RAM dumps in malware and legal investigations. |
